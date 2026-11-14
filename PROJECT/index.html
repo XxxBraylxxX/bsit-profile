@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html>
+<head>
+        <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title> BSIT Student Registration</title>
+
+    <style>
+        body {
+            background-color: beige;
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            width: 90%;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        h1 {
+            background-color: #1d4e7a;
+            color: white;
+            text-align: center;
+            padding: 30px 20px;
+            border-radius: 12px;
+            margin-bottom: 25px;
+            text-shadow: 3px 3px 6px gray;
+        }
+
+        .photo {
+            width: 100%;
+            max-width: 200px;
+            height: auto;
+            aspect-ratio: 1 / 1;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 5px solid white;
+            box-shadow: 0 4px 10px gray;
+        }
+
+        img {
+            opacity: 0.6;
+            transition: opacity 0.4s;
+        }
+
+        img:hover {
+            opacity: 1;
+        }
+
+        img, video {
+            max-width: 100%;
+            height: auto;
+        }
+
+        @keyframes slide-in {
+            from {
+                opacity: 0;
+                transform: translateX(-100px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        .title {
+            animation: slide-in 1.5s;
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .card {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px gray;
+            transition: background-color 0.4s, box-shadow 0.4s, transform 0.4s;
+        }
+
+        .card:hover {
+            background-color: #fff3cd;
+            box-shadow: 0 8px 20px black;
+            transform: scale(1.05) rotate(2deg);
+        }
+
+        button {
+            background-color: #1d4e7a;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        button:hover {
+            background-color: orange;
+            transform: scale(1.1);
+        }
+
+        input, select, textarea {
+            max-width: 100%;
+        }
+
+        .table-box {
+            overflow-x: auto;
+        }
+
+        @media (max-width: 768px) {
+            .cards {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 480px) {
+            body {
+                padding: 10px;
+                font-size: 14px;
+            }
+
+            h1 {
+                font-size: 1.4rem;
+                padding: 20px 15px;
+            }
+
+            .cards {
+                grid-template-columns: 1fr;
+            }
+
+            button {
+                width: 100%;
+                margin-bottom: 10px;
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            .title {
+                animation: none;
+            }
+
+            .card,
+            img,
+            button {
+                transition: none;
+            }
+
+            .card:hover,
+            button:hover {
+                transform: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+   <h1 class="title"> BSIT Student Registration System
+    <img src="IMAGES/bsit_logo.jpg" alt="BSIT PARSERS LOGO" width="30" height="30">
+</h1>
+    
+    <br>
+    <h1> IMAGES </h1>
+        <div class="cards">
+        <div class="card">
+            <h3>About Me</h3>
+            <p>Brylle Peter G. Orozco, a 2nd year BSIT student at CTU - AC.</p>
+        </div>
+
+        <div class="card">
+            <h3>What I Learn</h3>
+            <p>The basics and how complex making a website really is.</p>
+        </div>
+
+        <div class="card">
+            <h3>My Goal</h3>
+            <p>To become rich and but whatever I want.</p>
+        </div>
+    </div>
+<p> CTU - AC BSIT Official Logo </p>
+    <a href="IMAGES/bsit_logo.jpg" target="BSIT_logo">
+    <img src="IMAGES/bsit_logo.jpg" alt="CTU AC BSIT_LOGO" width="150">
+</a>
+         
+    <p> Click the logo from above to access it. </p>
+
+    <img class="photo" src="IMAGES/student_profile.jpg" alt="STUDENT_PROFILE">
+        <p>This is me, Brylle Peter yo!</p><br>
+   
+    
+    <h1> AUDIO </h1>
+    <p> An introduction to the BSIT program in CTU - AC </p><br>
+    <audio controls>
+    <source src="AUDIO/Introduction_audio.m4a" type="audio/mp4">
+</audio>
+    <br>
+    <h1> VIDEO </h1>
+    <p> A guide on running python using Spyder 6 </p>
+    <video controls width="500">
+    <source src="VIDEO/Guide_video.mp4" type="video/mp4">
+</video>
+
+    <p> Welcome to the BSIT Student Registration webpage. </p>
+    <h2> Quick Links </h2>
+        <div class="cards"></div>
+
+    <div class="card">
+        <h3>Home</h3>
+        <a href="index.html">Go to Home</a>
+    </div>
+
+    <div class="card">
+        <h3>Google</h3>
+        <a href="https://www.google.com/" target="_blank">Open Google</a>
+    </div>
+
+    <div class="card">
+        <h3>CTU Website</h3>
+        <a href="https://sis-argao.ctu.edu.ph/?fbclid=IwY2xjawUR4NhwZG9mAWV4dG4DYWVtAjEwAGJyaWQRMVlZSDJUYVJQRXhTZzlIb3FzcnRjBmFwcF9pZBAyMjIwMzkxNzg4MjAwODkyAAEei2HkJ4_BdLYN0iiPDObIq4Z1bX58TZIa3iFltKn1sownrh7a1Bax2VkaYs4_aem_NdrYfLDbEMyrNPS6oN-RcA" target="_blank">Open CTU Website</a>
+    </div>
+        </div>
+    <h2> Student Information </h2>
+    
+        <div class="table-box">
+    <table border = "1">
+        <tr>
+            <th> Student ID </th>
+            <th> Full Name </th>
+            <th> Program </th>
+            <th> Year Level </th>
+            <th> Email </th>
+        </tr>
+        
+        <tr>
+            <td> 2026-001 </td>
+            <td> Juan Dela Cruz </td>
+            <td> BSIT </td>
+            <td> 1st Year </td>
+            <td> juan@example.com </td>
+        </tr>
+        
+        <tr>
+            <td> 2026-002 </td>
+            <td> Brylle Peter G. Orozco </td>
+            <td> BSIT </td>
+            <td> 2nd Year </td>
+            <td> brayl@gmail.com </td>
+        </tr>
+            
+        <tr>
+            <td> 2026-003 </td>
+            <td> Core D. Apya </td>
+            <td> BSIT </td>
+            <td> 2nd Year </td>
+            <td> coredapya@gmail.com </td>
+        </tr>
+ 
+        <tr>
+            <td> 2026-004 </td>
+            <td> Bot Cho K. Oy </td>
+            <td> BSIT </td>
+            <td> 2nd Year </td>
+            <td> botchokoy@gmail.com </td>
+        </tr> 
+        
+        <tr>
+            <td> 2026-005 </td>
+            <td> Aye Love Y. Ou </td>
+            <td> BSIT </td>
+            <td> 2nd Year </td>
+            <td> ayeloveyou@gmail.com </td>
+        </tr>
+    </table>
+    </div>    
+    <form>
+        <label for = "fullname"> Full Name:</label>
+        <input
+            type = "text"
+            id = "fullname"
+            name = "fullname"
+            placeholder = "Enter your full name"
+            required>
+       
+        <br><br>
+        
+        <label for = "email"> Email Address: </label>
+        <input
+            type = "email"
+            id = "email"
+            name = "email"
+            placeholder = "Enter your email address"
+            required>
+       
+        <br><br>
+        
+        <label for = "password"> Password: </label>
+        <input
+            type = "password"
+            id = "password"
+            name = "password"
+            placeholder = "Enter your password"
+            required>
+        
+        <br><br>
+        
+        <label for="age">Age:</label>
+        <input
+            type="number"
+            id="age"
+            name="age"
+            min="15"
+            max="100">
+        
+        <br><br>
+        
+        <label for="birthdate">Birthdate:</label>
+        <input
+            type="date"
+            id="birthdate"
+            name="birthdate">
+
+        <br><br>
+        
+        <label for="mobile">Mobile Number:</label>
+        <input
+         type="tel"
+         id="mobile"
+         name="mobile"
+         placeholder="09XXXXXXXXX">
+ 
+        <br><br>
+        
+        <label for="program">Program:</label>
+ 
+        <select id="program" name="program">
+            <option value="">-- Select Program --</option>
+            <option value="bsit">BS Information Technology</option>
+            <option value="bscs">BS Computer Science</option>
+            <option value="bsis">BS Information Systems</option>
+            </select>
+
+        <br><br>
+        
+        <p>Year Level:</p>
+        
+        <input type="radio" id="first" name="year" value="1st Year">
+        <label for="first">1st Year</label>
+
+        <input type="radio" id="second" name="year" value="2nd Year">
+        <label for="second">2nd Year</label>
+
+        <input type="radio" id="third" name="year" value="3rd Year">
+        <label for="third">3rd Year</label>
+
+        <input type="radio" id="fourth" name="year" value="4th Year">
+        <label for="fourth">4th Year</label>
+
+        <br><br>
+        
+        <p>Programming Skills:</p>
+        
+        <input type="checkbox" id="html" name="skills" value="HTML">
+        <label for="html">HTML</label>
+        
+        <input type="checkbox" id="css" name="skills" value="CSS">
+        <label for="css">CSS</label>
+
+       <input type="checkbox" id="javascript" name="skills" value="JavaScript">
+        <label for="javascript">JavaScript</label>
+        
+        <input type="checkbox" id="java" name="skills" value="Java">
+        <label for="java">Java</label>
+
+        <br><br>
+        
+        <label for="address">Address:</label><br>
+        
+        <textarea id="address" name="address" rows="5" cols="40" placeholder="Enter your complete address"></textarea>
+
+        <br><br>
+        
+        <button type="submit">Submit Registration</button>
+        
+        <button type="reset">Clear Form</button>
+    
+    </form>
+    
+            
+
+</body>
+</html>
